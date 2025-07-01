@@ -6,7 +6,7 @@
 
 const name = "Sumant Rai"
 let age = 20
-isLoggedIn = true
+const isLoggedIn = true
 
 const city = null
 const state = undefined
