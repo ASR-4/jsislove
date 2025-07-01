@@ -8,8 +8,8 @@ console.log(name.toLocaleLowerCase());
 
 console.log(name.endsWith("i"));
 console.log(name.indexOf("t"));
-console.log(name.concat(" Apeksha More"));
-console.log(name.replace("Sumant Rai","Apeksha More"));
+console.log(name.concat(" Shubhangi Mishra"));
+console.log(name.replace("Sumant Rai","Shubhangi Mishra"));
 console.log(name.search("i"));
 
 

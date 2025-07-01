@@ -34,11 +34,43 @@ const myFunction = function(){
     
 }
 
-console.log(typeof bigNumber);
-console.log(typeof scoreValue);
-console.log(typeof outSideTemp);
+// console.log(typeof bigNumber);
+// console.log(typeof scoreValue);
+// console.log(typeof outSideTemp);
 
-console.log(typeof myFunction);
+// console.log(typeof myFunction);
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(primitive), Heap(Non-Primitive)
+
+let myYoutubeName = "sumantraidotcom"
+
+let anotherName = myYoutubeName
+
+anotherName = "codewithRishu"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+
+let userOne = {
+    email: "user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email ="rai@microsoft.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+
+
 
 
 
