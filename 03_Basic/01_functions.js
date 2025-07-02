@@ -34,3 +34,37 @@ console.log(message);
 
 
 
+
+function calCulateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+console.log(calCulateCartPrice(100, 200, 300, 400, 2000));
+
+
+const user = {
+    username: "Sumant Rai",
+    price: 199
+
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+    
+}
+
+// handleObject(user)
+handleObject({
+    username : "Shubhangi",
+    price: 400
+})
+
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+
+}
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([100, 200, 300, 400]));
+
