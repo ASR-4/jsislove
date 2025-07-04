@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            background-color: #424242;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="image">
+            <li><img height="250" width="250"
+                    src="https://images.pexels.com/photos/67216/lions-animal-male-female-lions-67216.jpeg?_gl=1*oh7wdx*_ga*MTE0MzUyMjk3MC4xNzUwNTE5MTYx*_ga_8JE65Q40S6*czE3NTE2MDQzNzkkbzIkZzEkdDE3NTE2MDQ5MTEkajEwJGwwJGgw"
+                    alt="" id="Lion"></li>
+            <li><img height="250" width="250"
+                    src="https://images.pexels.com/photos/206676/pexels-photo-206676.jpeg?_gl=1*1oypbne*_ga*MTE0MzUyMjk3MC4xNzUwNTE5MTYx*_ga_8JE65Q40S6*czE3NTE2MDQzNzkkbzIkZzEkdDE3NTE2MDQ5NzgkajM5JGwwJGgw"
+                    alt="" id="Owl"></li>
+            <li><img height="250" width="250"
+                    src="https://images.pexels.com/photos/38008/pexels-photo-38008.jpeg?_gl=1*zq9zde*_ga*MTE0MzUyMjk3MC4xNzUwNTE5MTYx*_ga_8JE65Q40S6*czE3NTE2MDQzNzkkbzIkZzEkdDE3NTE2MDUwNjMkajU5JGwwJGgw"
+                    alt="" id="Dog"></li>
+            <li><img height="250" width="250"
+                    src="https://images.pexels.com/photos/40984/animal-ara-macao-beak-bird-40984.jpeg?_gl=1*6s79j4*_ga*MTE0MzUyMjk3MC4xNzUwNTE5MTYx*_ga_8JE65Q40S6*czE3NTE2MDQzNzkkbzIkZzEkdDE3NTE2MDUxMDkkajEzJGwwJGgw"
+                    alt="" id="Parrato"></li>
+            <li><img height="250" width="250"
+                    src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?_gl=1*178mz1m*_ga*MTE0MzUyMjk3MC4xNzUwNTE5MTYx*_ga_8JE65Q40S6*czE3NTE2MDQzNzkkbzIkZzEkdDE3NTE2MDUyMTAkajEwJGwwJGgw"
+                    alt="" id="Cats"></li>
+            <a style="color: aliceblue;" href="https://www.google.com" id="google">Google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftkey, keyCode
+
+    // document.getElementById("Owl").onclick = function(){
+    //     alert("owl Clicked")
+    // }
+    // document.getElementById("Owl").addEventListener("click",function(e){
+    //    console.log(e);
+
+    // },false)
+    // document.getElementById("image").addEventListener("click", function (e) {
+    //     console.log("clicked inside the ul");
+
+    // }, false)
+    // document.getElementById("Owl").addEventListener("click", function (e) {
+    //     console.log("Owl Clicked");
+    //     e.stopPropagation()
+
+    // }, false)
+
+    // document.getElementById("google").addEventListener('click', function (e) {
+    //     console.log("Google clicked");
+    //     e.preventDefault()
+
+
+    // }, false)
+
+    document.getElementById('image').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            // removeIt.parentNode.removeChild(removeIt)
+
+        }
+
+
+    })
+
+</script>
+
+</html>
