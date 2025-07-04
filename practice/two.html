@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+    // Create the form element
+    const form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', 'submit.php'); // Or any endpoint you want to submit to
+
+    // Create input element for name
+    const nameInput = document.createElement('input');
+    nameInput.setAttribute('type', 'text');
+    nameInput.setAttribute('name', 'fullname');
+    nameInput.setAttribute('placeholder', 'Full Name');
+
+    // Create input element for email
+    const emailInput = document.createElement('input');
+    emailInput.setAttribute('type', 'email');
+    emailInput.setAttribute('name', 'email');
+    emailInput.setAttribute('placeholder', 'Email Address');
+
+    // Create a submit button
+    const submitButton = document.createElement('button');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.textContent = 'Submit';
+
+    // Append all elements to the form
+    form.appendChild(nameInput);
+    form.appendChild(document.createElement('br')); // Line break
+    form.appendChild(emailInput);
+    form.appendChild(document.createElement('br')); // Line break
+    form.appendChild(submitButton);
+
+    // Add some basic styling
+    form.style.padding = '20px';
+    form.style.backgroundColor = '#f2f2f2';
+    form.style.borderRadius = '5px';
+    form.style.maxWidth = '400px';
+    form.style.margin = '0 auto';
+
+    // Add spacing between elements
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.style.margin = '10px 0';
+        input.style.padding = '8px';
+        input.style.width = '100%';
+        input.style.boxSizing = 'border-box';
+    });
+
+    // Style the button
+    submitButton.style.padding = '10px 15px';
+    submitButton.style.backgroundColor = '#4CAF50';
+    submitButton.style.color = 'white';
+    submitButton.style.border = 'none';
+    submitButton.style.borderRadius = '4px';
+    submitButton.style.cursor = 'pointer';
+    submitButton.style.marginTop = '10px';
+
+    // Inject the form into the body
+    document.body.appendChild(form);
+
+
+
+</script>
+
+</html>
